@@ -8,8 +8,7 @@ body{
 #card{
     margin-top: 80px;
     border: solid;
-    width: 12vw;
-    padding-top: 20px;
+    padding: 20px;
     border-radius: 20px;
 }
 
