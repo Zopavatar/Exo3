@@ -1,0 +1,19 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#card{
+    margin-top: 80px;
+    border: solid;
+    width: 12vw;
+    padding-top: 20px;
+    border-radius: 20px;
+}
+
+img{
+    height:20vh;
+    border-radius: 15px;
+}
