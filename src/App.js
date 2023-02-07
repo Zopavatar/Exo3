@@ -3,6 +3,7 @@ import {Title} from './components/title/title';
 import {Picture} from './components/picture/picture';
 import {Info} from './components/info/info';
 import {Bouton} from './components/bouton/bouton';
+import {Imc} from './components/IMC/imc';
 
 import image from'./components/picture/public/img/img.jpeg';
 import img from './components/info/public/img/image.jpg';
@@ -10,13 +11,32 @@ import img from './components/info/public/img/image.jpg';
 
 function App() {
 
-  let charlotte ={ 
+  let charlotte = { 
     nom: "Landuyt",
     age: "24 ans",
     src: img,
     taille: "164 cm", 
   };
 
+  let Hugues = {
+    nom: "Hugues",
+    taille: 1.84,
+    poids: 95,
+  }
+
+  let Jeanne = {
+    nom: "Jeanne",
+    taille: 1.64,
+    poids: 54
+  }
+
+  let Nathan = {
+    nom: "Nathan",
+    taille: 1.86,
+    poids: 75
+  }
+
+  let tab = [Hugues,Jeanne,Nathan];
   
 
   return (
@@ -27,6 +47,12 @@ function App() {
 
         <Bouton param_1="button" param_2={function ma_fonction(){console.log("bonjour");}} param_3="bonjour"/>
         <Bouton param_1="submit" param_3="click"/>
+
+        {tab.map((personne)=>(
+            <Imc param_1={personne.nom} param_2={personne.taille} param_3={personne.poids}/>
+        ))}
+        
+        
     </div>
   );
 }
